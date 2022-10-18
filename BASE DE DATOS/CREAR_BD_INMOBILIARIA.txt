@@ -1,0 +1,59 @@
+CREATE TABLE `estado` (
+	`Id_Estado` INT(11) NOT NULL AUTO_INCREMENT,
+	`Nombre_Estado` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	PRIMARY KEY (`Id_Estado`) USING BTREE
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=4
+;
+
+CREATE TABLE `operatoriacomercial` (
+	`Id_Operatoria_Comercial` INT(11) NOT NULL AUTO_INCREMENT,
+	`Nombre_Operatoria_Comercial` VARCHAR(20) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	PRIMARY KEY (`Id_Operatoria_Comercial`) USING BTREE
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+;
+
+CREATE TABLE `tipo` (
+	`Id_Tipo` INT(11) NOT NULL AUTO_INCREMENT,
+	`Nombre_Tipo` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	PRIMARY KEY (`Id_Tipo`) USING BTREE
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=4
+;
+
+CREATE TABLE `propietario` (
+	`Id_Propietario` INT(11) NOT NULL AUTO_INCREMENT,
+	`Nombre` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Direccion` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Contacto` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	PRIMARY KEY (`Id_Propietario`) USING BTREE
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+;
+
+CREATE TABLE `propiedad` (
+	`Id_Propiedad` INT(11) NOT NULL AUTO_INCREMENT,
+	`Id_Tipo` INT(11) NOT NULL,
+	`Id_Estado` INT(11) NOT NULL,
+	`Id_Operatoria_Comercial` INT(11) NOT NULL,
+	`Id_Propietario` INT(11) NOT NULL,
+	`Nombre` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Direccion` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	`Contacto` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_ci',
+	PRIMARY KEY (`Id_Propiedad`) USING BTREE,
+	UNIQUE INDEX `Id_Tipo` (`Id_Tipo`) USING BTREE,
+	UNIQUE INDEX `Id_Estado` (`Id_Estado`) USING BTREE,
+	UNIQUE INDEX `Id_Operatoria_Comercial` (`Id_Operatoria_Comercial`) USING BTREE,
+	UNIQUE INDEX `Id_Propietario` (`Id_Propietario`) USING BTREE
+)
+COLLATE='utf8mb4_unicode_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=2
+;
