@@ -11,3 +11,5 @@ Destinado al registro de actividades de las consignas solicitadas
 
 •	Rojo Pedro Omar. <<GitHub>> https://github.com/tecnosisnet
 # CONSIGNAS_ :heavy_check_mark:
+
+https://user-images.githubusercontent.com/106171748/196010366-e960c511-6240-4953-b8e0-3a07b475da23.jpg
