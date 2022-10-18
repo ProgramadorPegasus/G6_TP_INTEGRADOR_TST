@@ -9,7 +9,5 @@ Destinado al registro de actividades de las consignas solicitadas
 
 •	Juan Carlos Narváez. <<GitHub>> https://github.com/ProgramadorPegasus
 
-•	Rojas Jorge Daniel. <<GitHub>> https://github.com/Cabro645
-
 •	Rojo Pedro Omar. <<GitHub>> https://github.com/tecnosisnet
 # CONSIGNAS
