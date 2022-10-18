@@ -28,7 +28,6 @@ create table Propietario
     Nombre varchar(40),
     Direccion varchar(50),
     Contacto int,
-    Id_Propiedad int,
     constraint Propietario_fk foreign key (Id_Propiedad)
     references Propiedad (Id_Propiedad)
     );
