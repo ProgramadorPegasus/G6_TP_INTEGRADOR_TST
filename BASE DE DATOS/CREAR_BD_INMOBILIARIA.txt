@@ -1,3 +1,5 @@
+CREATE DATABASE bd_inmobiliaria;
+USE bd_inmobiliaria;
 CREATE TABLE `estado` (
 	`Id_Estado` INT(11) NOT NULL AUTO_INCREMENT,
 	`Nombre_Estado` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_ci',
