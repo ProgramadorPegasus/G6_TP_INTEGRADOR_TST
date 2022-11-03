@@ -1,8 +1,8 @@
 -------------------------------------------------------
 -- Tabla ESTADO - INSERTANDO DATOS 
 -------------------------------------------------------
-insert into `insert-db`.`estado` values (1,'DISPONIBLE');
-insert into `insert-db`.`estado` values (2,'NO DISPONIBLE');
+insert into `bd_inmobiliaria`.`estado` values (1,'DISPONIBLE');
+insert into `bd_inmobiliaria`.`estado` values (2,'NO DISPONIBLE');
 
 -------------------------------------------------------
 -- Tabla OPERATORIA COMERCIAL - INSERTANDO DATOS 
