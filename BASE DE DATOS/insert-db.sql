@@ -7,8 +7,8 @@ insert into `bd_inmobiliaria`.`estado` values (2,'NO DISPONIBLE');
 -------------------------------------------------------
 -- Tabla OPERATORIA COMERCIAL - INSERTANDO DATOS 
 -------------------------------------------------------
-insert into `bd_inmobiliaria`.`operatoria comercial` values (1,'VENTA');
-insert into `bd_inmobiliaria`.`operatoria comercial` values (2,'ALQUILER');
+insert into `bd_inmobiliaria`.`operatoriacomercial` values (1,'VENTA');
+insert into `bd_inmobiliaria`.`operatoriacomercial` values (2,'ALQUILER');
 
 -------------------------------------------------------
 -- Tabla PROPIETARIO - INSERTANDO DATOS 
