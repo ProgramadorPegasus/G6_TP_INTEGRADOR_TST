@@ -24,10 +24,10 @@ insert into `bd_inmobiliaria`.`propietario` values (4,'Mavi Schaffre','Tierra de
 insert into `bd_inmobiliaria`.`tipo` values (1,'LOCAL COMERCIAL');
 insert into `bd_inmobiliaria`.`tipo` values (2,'DEPARTAMENTO ');
 insert into `bd_inmobiliaria`.`tipo` values (3,'CASA ');
-insert into `bd_inmobiliariab`.`tipo` values (4,'CABAÑA');
-insert into `ibd_inmobiliaria`.`tipo` values (5,'MONOAMBIENTE');
+insert into `bd_inmobiliaria`.`tipo` values (4,'CABAÑA');
+insert into `bd_inmobiliaria`.`tipo` values (5,'MONOAMBIENTE');
 insert into `bd_inmobiliaria`.`tipo` values (6,'DOS AMBIENTES ');
-insert into `bd_inmobiliariab`.`tipo` values (7,'QUINCHO ');
+insert into `bd_inmobiliaria`.`tipo` values (7,'QUINCHO ');
 insert into `bd_inmobiliaria`.`tipo` values (8,'CAMPO ');
 insert into `bd_inmobiliaria`.`tipo` values (9,' ESCUELA');
 insert into `bd_inmobiliaria`.`tipo` values (10,'JARDIN');
