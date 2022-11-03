@@ -50,10 +50,10 @@ CREATE TABLE `propiedad` (
 	`Direccion` VARCHAR(50) NOT NULL COLLATE 'utf8mb4_unicode_ci',
 	`Contacto` VARCHAR(40) NOT NULL COLLATE 'utf8mb4_unicode_ci',
 	PRIMARY KEY (`Id_Propiedad`) USING BTREE,
-	UNIQUE INDEX `Id_Tipo` (`Id_Tipo`) USING BTREE,
-	UNIQUE INDEX `Id_Estado` (`Id_Estado`) USING BTREE,
-	UNIQUE INDEX `Id_Operatoria_Comercial` (`Id_Operatoria_Comercial`) USING BTREE,
-	UNIQUE INDEX `Id_Propietario` (`Id_Propietario`) USING BTREE
+	KEY `Id_Tipo` (`Id_Tipo`) USING BTREE,
+	KEY `Id_Estado` (`Id_Estado`) USING BTREE,
+	KEY `Id_Operatoria_Comercial` (`Id_Operatoria_Comercial`) USING BTREE,
+	KEY `Id_Propietario` (`Id_Propietario`) USING BTREE
 )
 COLLATE='utf8mb4_unicode_ci'
 ENGINE=InnoDB
