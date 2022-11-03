@@ -18,20 +18,22 @@ salir = False
 
 # Issue #2 Hacer codigo para Ingresar propiedad  - PEDRO ROJO
 def ingresar_Propiedad():
-    ver_conexion()
-    datos=("INSERT INTO db_inmobiliaria.propiedad (Id_Propiedad, Id_Tipo, Id_Estado, Id_Operatoria_Comercial) VALUES ("10","2","1","1","10","Juan Perez","Carlos Paz","43253443"))
-    # datos = ("INSERT INTO db_inmobiliaria.propiedad (Id_Propiedad, Id_Tipo, Id_Estado, Id_Operatoria_Comercial) VALUES (%s, %s, %s, %s)")
-    inmobiliaria.execute(datos)
+    
+    campos=("INSERT INTO db_inmobiliaria.propiedad (Id_Propiedad, Id_Tipo, Id_Estado, Id_Operatoria_Comercial,Id_Propietario,Nombre,Direccion,Contacto) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)")
+    datos = ("10","2","1","1","10","Juan Perez","Carlos Paz","43253443")
+    inmobiliaria.conectar()
+    inmobiliaria.execute(campos,datos)
     inmobiliaria.commit()
+    print("Propiedad agregada")
+    time.sleep(2) 
 
 # Issue #5 Reporte - Listado de propiedades TOTALES, sin distincion de estado  - PEDRO ROJO
 def listarPropiedades(self):
     cursor=inmobiliaria.cursor()
-    cursor.execute("SELECT Nombre_Estado, Nombre_Tipo, P.Nombre, P.Direccion, P.Contacto, Pr.Nombre, Pr.Direccion, Pr.Contacto FROM  Propiedad Pr inner join Estado E on  Pr.Id_Estado=E.Id_Estado inner join Propietario P on Pr.Id_Propietario=P.Id_Propietario inner join Tipo T on Pr.Id_Tipo=T.Id_Tipo;")
-    for x in cursor:
-        print(x)
-    inmobiliaria.close()
-    print("CONEXION CERRADA EXITOSAMENTE")
+    cursor.execute("SELECT * from db_inmobiliaria.propiedad")
+    resul = cursor.fetchall()
+    print(resul)
+    
 
 
 
@@ -78,8 +80,5 @@ while not salir:
             system("cls")
             break
     except:
-        print()
-        print('OPCIÓN INCORRECTA')
-        print()
-        continua = input('PRESIONE CUALQUIER TECLA')
+        continua = input('Por favor, presione cualquier tecla para continuar ...')
         system("cls")
