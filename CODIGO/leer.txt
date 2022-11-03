@@ -1,5 +1,1 @@
-El formato del archivo a subir, debe ser:
-Nombre_alumno_Issue_Nro.py
 
-Ejemplo: 
-      Pedro_Rojo_Issue_1.py
