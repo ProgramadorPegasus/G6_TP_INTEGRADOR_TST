@@ -13,10 +13,10 @@ insert into `bd_inmobiliaria`.`operatoriacomercial` values (2,'ALQUILER');
 -------------------------------------------------------
 -- Tabla PROPIETARIO - INSERTANDO DATOS 
 -------------------------------------------------------
-insert into `bd_inmobiliaria`.`propietario` values (1,'Emilio Vera','Cordoba','3513370557','Emilio@hotmail.com');
-insert into `bd_inmobiliaria`.`propietario` values (2,'Pedro ROJO ','Carlos paz','33134567','pedro@hotmail.com');
-insert into `bd_inmobiliaria`.`propietario` values (3,'Juan narvaez','Santa Cruz','33134568','Juan@hotmail.com');
-insert into `bd_inmobiliaria`.`propietario` values (4,'Mavi Schaffre','Tierra del fuego','33134569','Mavi@hotmail.com');
+insert into `bd_inmobiliaria`.`propietario` values (1,'Emilio Vera','Cordoba','3513370557');
+insert into `bd_inmobiliaria`.`propietario` values (2,'Pedro ROJO ','Carlos paz','33134567');
+insert into `bd_inmobiliaria`.`propietario` values (3,'Juan narvaez','Santa Cruz','33134568');
+insert into `bd_inmobiliaria`.`propietario` values (4,'Mavi Schaffre','Tierra del fuego','33134569');
 
 -------------------------------------------------------
 -- Tabla TIPO - INSERTANDO DATOS 
