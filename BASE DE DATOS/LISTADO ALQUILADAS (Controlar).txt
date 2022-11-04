@@ -1,0 +1,15 @@
+Listado general de las propiedades ALQUILADA
+
+SELECT 
+Propiedad.Direccion,
+Propiedad.Habitaciones,
+Propiedad.`Baños`,
+Estado.Nombre_Estado,
+Propietario.Nombre,
+Propietario.Contacto,
+Tipo.Nombre_Tipo
+FROM Propiedad, Estado, Propietario, Tipo 
+WHERE Propiedad.Id_Estado = 2
+AND Propiedad.Id_Estado = Estado.Id_Estado
+AND Propiedad.Id_Propietario= Propietario.Id_Propietario
+AND Propiedad.Id_Tipo= Tipo.Id_Tipo;
