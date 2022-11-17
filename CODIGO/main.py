@@ -23,29 +23,11 @@ while True:
     opc = int(input("Seleccione una opción: "))
     
     if opc == 1:
-       controlador.InsertaProp()
-       
-    elif opc == 2:  
-        controlador.ActualizarPropiedad()
-
-    elif opc == 3:
-        controlador.EliminarPropiedad()
-
+       controlador.InsertaProp()   # Issue 2 - Pedro Rojo
+   
     elif opc == 4:  
-        controlador.ListProp()
+        controlador.ListProp() #  Issue 5 - Pedro Rojo
 
-    elif opc == 5:
-        controlador.ListarPropiedadesDisponiblesVenta()
-
-    elif opc == 6:
-        controlador.ListarPropiedadesDisponiblesAlquiler()
-
-    elif opc == 7:
-        controlador.ListarPropiedadesVendidas()
-
-    elif opc == 8:
-        controlador.ListarPropiedadesAlquiladas()
- 
     elif opc == 9:
         print("")
         print("===============================================")
