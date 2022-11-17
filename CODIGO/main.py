@@ -1,84 +1,60 @@
-from itertools import combinations_with_replacement
-import time
-from os import system
-import Controladores.Conexion as inmobiliaria
+import controlador
 
-def ver_conexion():          
-    try:
-        print("Por favor espere, verificando Conexión base de datos")
-        inmobiliaria.conectar()
-        time.sleep(2)
-        
-    except:
-        print("Error de conexion, no se pude establecer vinculo a base de datos: ")
-        
-    return
+while True:
+    print("===============================================")
+    print("|    TRABAJO PRACTICO INTEGRADOR GRUPO 6      | ")
+    print("|                INMOBILIARIA                 |") 
+    print("|            BIENES RAICES FUTURE             |")
+    print("===============================================")
+    print("")
+    print("============== MENÚ PRINCIPAL =================")
+    print("|  1 - INGRESAR PROPIEDAD                     |")
+    print("|  2 - MODIFICAR PROPIEDAD                    |")
+    print("|  3 - ELIMINAR PROPIEDAD                     |")
+    print("|  4 - LISTADO DE PROPIEDADES                 |")
+    print("|  5 - PROPIEDADES DISPONIBLES PARA VENTA     |")
+    print("|  6 - PROPIEDADES DISPONIBLES PARA ALQUILER  |")
+    print("|  7 - PROPIEDADES VENDIDAS                   |")
+    print("|  8 - PROPIEDADES ALQUILADAS                 |")
+    print("|  9 - SALIR                                  |")
+    print("===============================================")
 
-salir = False
-
-# Issue #2 Hacer codigo para Ingresar propiedad  - PEDRO ROJO
-def ingresar_Propiedad():
+    print("")
+    opc = int(input("Seleccione una opción: "))
     
-    campos=("INSERT INTO db_inmobiliaria.propiedad (Id_Propiedad, Id_Tipo, Id_Estado, Id_Operatoria_Comercial,Id_Propietario,Nombre,Direccion,Contacto) VALUES (%s,%s,%s,%s,%s,%s,%s,%s)")
-    datos = ("10","2","1","1","10","Juan Perez","Carlos Paz","43253443")
-    inmobiliaria.conectar()
-    inmobiliaria.execute(campos,datos)
-    inmobiliaria.commit()
-    print("Propiedad agregada")
-    time.sleep(2) 
+    if opc == 1:
+       controlador.InsertaProp()
+       
+    elif opc == 2:  
+        controlador.ActualizarPropiedad()
 
-# Issue #5 Reporte - Listado de propiedades TOTALES, sin distincion de estado  - PEDRO ROJO
-def listarPropiedades(self):
-    cursor=inmobiliaria.cursor()
-    cursor.execute("SELECT * from db_inmobiliaria.propiedad")
-    resul = cursor.fetchall()
-    print(resul)
-    
+    elif opc == 3:
+        controlador.EliminarPropiedad()
 
+    elif opc == 4:  
+        controlador.ListProp()
 
+    elif opc == 5:
+        controlador.ListarPropiedadesDisponiblesVenta()
 
-menu=("""\
------------------------------------------------------------------------
-|         Inmobiliaria Bienes Raices Future                           |
------------------------------------------------------------------------
-|                                                                     |
-| 1. Probar conexion Base de Datos                                           |
-| 2. Ingresar Nueva propiedad                                         |
-| 3. Modificar propiedad                                              |
-| 4. Eliminar  propiedad                                              |
-| 5. Listar todas las propiedades                                     |
-| 6. Listar propiedades disponibles para la venta                     |
-| 7. Listar propiedades disponibles para alquiler                     |
-| 8. Listar propiedades vendidas                                      |
-| 9. Listar propiedades alquiladas                                    |
-|                                                                     |
-| 0. Salir                                                            |
-|                                                                     |
------------------------------------------------------------------------\
- """)
+    elif opc == 6:
+        controlador.ListarPropiedadesDisponiblesAlquiler()
 
-while not salir:
-    print(menu)
-    try:
-        opcion = int(input("Por favor, ingrese una opción: "))
-        print()
-               
-        if opcion == 1:
-            ver_conexion()
-        elif opcion == 2:  # Issue #2 Hacer codigo para Ingresar propiedad  - PEDRO ROJO
-            print('Ingresar Nueva Propiedad:')
-            time.sleep(2)
-            ingresar_Propiedad()
-        elif opcion == 5: # Issue #5 Reporte - Listado de propiedades TOTALES, sin distincion de estado  - PEDRO ROJO
-            print('Listar todas las propiedades:')
-            time.sleep(2)
-            listarPropiedades()
-        elif opcion == 0:
-            print('Hasta luego ... !!!')
-            salir = True
-            time.sleep(1)
-            system("cls")
-            break
-    except:
-        continua = input('Por favor, presione cualquier tecla para continuar ...')
-        system("cls")
+    elif opc == 7:
+        controlador.ListarPropiedadesVendidas()
+
+    elif opc == 8:
+        controlador.ListarPropiedadesAlquiladas()
+ 
+    elif opc == 9:
+        print("")
+        print("===============================================")
+        print("===== ¡SALIENDO DEL SISTEMA - HASTA LUEGO ! ===")
+        print("===============================================")
+        print("")
+        break
+
+    else:
+            print("Opcion incorrecta, por favor seleccionar entre 1 y 9.")
+            print("")
+            
